@@ -6,7 +6,7 @@
     "@std/assert": "jsr:@std/assert@1",
     "ldapjs-promise": "npm:ldapjs-promise@^3.0.6",
     "ldapts": "npm:ldapts@^7.2.1",
-    "mega-rpc": "npm:mega-rpc@^0.0.5",
+    "mega-rpc": "npm:mega-rpc@^0.1.0",
     "zod": "npm:zod@^3.23.8"
   }
 }

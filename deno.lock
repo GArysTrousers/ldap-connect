@@ -6,8 +6,7 @@
     "npm:ldapjs-promise@^3.0.6": "3.0.6",
     "npm:ldapts@*": "7.2.1",
     "npm:ldapts@^7.2.1": "7.2.1",
-    "npm:mega-rpc@*": "0.0.5",
-    "npm:mega-rpc@^0.0.5": "0.0.5",
+    "npm:mega-rpc@0.1": "0.1.0",
     "npm:zod@^3.23.8": "3.23.8"
   },
   "jsr": {
@@ -167,8 +166,8 @@
         "whatwg-url"
       ]
     },
-    "mega-rpc@0.0.5": {
-      "integrity": "sha512-wj2CqFgOrMOYDJAIeSRaB1mMAe6kHipox7HmhsTVt5sh25VH3ummxX/fjbEfUIBu4PpS28qs1qLWEyhhfWINSA==",
+    "mega-rpc@0.1.0": {
+      "integrity": "sha512-qug5ynH9NJqCzvbITYS1xJMby2WPqtwGKlaBJL7jh8vIbiQvPYnSmmngVeTwO8ic6LWH9EQnDVYrEuGVBJmr/w==",
       "dependencies": [
         "uuid",
         "ws"
@@ -257,7 +256,7 @@
       "jsr:@std/assert@1",
       "npm:ldapjs-promise@^3.0.6",
       "npm:ldapts@^7.2.1",
-      "npm:mega-rpc@^0.0.5",
+      "npm:mega-rpc@0.1",
       "npm:zod@^3.23.8"
     ]
   }

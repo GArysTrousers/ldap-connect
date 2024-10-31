@@ -11,6 +11,7 @@ const authenticate:Rpc = async () => {
   })
   try {
     await client.bind(config.ldap.username, config.ldap.password)
+    client.destroy()
     return true
   } catch (e) {
     client.destroy()
@@ -19,7 +20,7 @@ const authenticate:Rpc = async () => {
   }
 }
 
-const client = new RpcClient(config.remote.webSocketUrl, [
+const rpcClient = new RpcClient(config.remote.webSocketUrl, [
   ["authenticate", authenticate],
 ])
 

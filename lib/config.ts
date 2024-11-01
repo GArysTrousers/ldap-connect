@@ -2,9 +2,10 @@ import { z, ZodError } from "zod";
 
 const schema = z.object({
     ldap: z.object({
-      servers: z.array(z.string()),
+      host: z.string().url(),
       username: z.string(),
       password: z.string(),
+      domain: z.string(),
     }),
     remote: z.object({
       webSocketUrl: z.string().url(),
@@ -15,9 +16,10 @@ export type Config = z.infer<typeof schema>
 
 export const defaultConfig: Config = {
   ldap: {
-    servers: ["ldap://127.0.0.1:389"],
-    username: "user@my.lan",
+    host: "ldap://127.0.0.1:389",
+    username: "user",
     password: "P@ssword!",
+    domain: "mydomain.com"
   },
   remote: {
     webSocketUrl: "ws://127.0.0.1:8080",
@@ -33,7 +35,6 @@ export function loadConfig(filename: string) {
       if (e instanceof ZodError) {
         console.log("\nError: config.json contains the following errors:\n")
         console.log(e.issues)
-        alert("\n")
       }
       else if (e.name === "NotFound") {
         if (confirm("\nI couldn't find a config.json, should I make one?")) {
